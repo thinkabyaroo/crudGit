@@ -1,5 +1,5 @@
 
-@extends('master')
+@extends('admin')
 @section('title')
     Article List
 @endsection

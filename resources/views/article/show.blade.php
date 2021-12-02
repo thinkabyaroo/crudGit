@@ -22,6 +22,13 @@
 
                         </div>
                     </div>
+
+
+                @isset($article->photo)
+                    @foreach($article->photo as $photo)
+                        <img src="{{asset('storage/images/'.$photo->name)}}" class="article-photo" alt="">
+                    @endforeach
+                @endisset
             </div>
         </div>
     </div>

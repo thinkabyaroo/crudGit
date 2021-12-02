@@ -1,4 +1,4 @@
-@extends('master')
+@extends('admin')
 @section('title')
     Create Article
 @endsection
@@ -16,7 +16,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{route('article.store')}}" method="post">
+                    <form action="{{route('article.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="" class="form-label">Article</label>
@@ -42,6 +42,10 @@
                             @error('description')
                             <small class="text-danger">{{$message}}</small>
                             @enderror
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Photo Upload</label>
+                            <input type="file" class="form-control" name="photo[]" accept="image/jpeg" multiple>
                         </div>
                         <div class="mb-3">
                             <button class="btn btn-outline-primary"> Create Article</button>

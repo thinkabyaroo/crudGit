@@ -1,4 +1,4 @@
-@extends('master')
+@extends('admin')
 @section('title')
     Create Category
 @endsection

@@ -21,4 +21,4 @@ Route::get('/', function () {
 
 Route::resource('category',CategoryController::class);
 Route::resource('article',ArticleController::class);
-
+Route::resource('photo',\App\Http\Controllers\PhotoController::class);
